@@ -3978,8 +3978,8 @@ blockquote {
 
 .big-banner-section {
   margin-top: -115px;
-  padding-top: 200px;
-  padding-bottom: 140px;
+  padding-top: 220px;
+  padding-bottom: 120px;
   position: relative;
 }
 
@@ -4023,6 +4023,7 @@ blockquote {
 
 .home-services {
   display: flex;
+  margin-top: -0.5em;
 }
 
 .simple-text-content {
