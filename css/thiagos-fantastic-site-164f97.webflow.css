@@ -3280,6 +3280,11 @@ blockquote {
 .services-list-wrapper {
   width: 66.7%;
   margin-left: 15px;
+  transition: all 0.1s linear;
+}
+
+.services-list-wrapper:hover {
+  scale: 1.05;
 }
 
 .services-list-wrapper.one-item {
@@ -3395,7 +3400,7 @@ blockquote {
   border: 1px solid var(--white);
   border-radius: 50px;
   margin-top: 30px;
-  padding: 12px 40px;
+  padding: 10px 30px;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -4026,7 +4031,7 @@ blockquote {
 }
 
 .text-wrapper {
-  grid-row-gap: 50px;
+  grid-row-gap: 20px;
   flex-direction: column;
   align-items: flex-start;
   width: 40%;
@@ -8069,6 +8074,11 @@ blockquote {
     padding-bottom: 60px;
   }
 
+  .section-p-reduce {
+    padding-top: 20px;
+
+  }
+
   .section.without-top-spacing {
     padding-top: 0;
   }
@@ -8446,7 +8456,7 @@ blockquote {
 
   .tabs-menu {
     flex-wrap: wrap;
-    justify-content: flex-end;
+
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
@@ -8493,10 +8503,6 @@ blockquote {
   .tabs {
     margin-top: 0;
     padding-bottom: 60px;
-  }
-
-  .tabs-content {
-    margin-top: 20px;
   }
 
   .testimonials {
