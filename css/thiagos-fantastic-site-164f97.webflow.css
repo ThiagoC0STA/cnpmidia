@@ -3430,7 +3430,7 @@ blockquote {
 .subheading {
   color: var(--white);
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .subheading.text-primary {
@@ -3978,8 +3978,8 @@ blockquote {
 
 .big-banner-section {
   margin-top: -115px;
-  padding-top: 195px;
-  padding-bottom: 80px;
+  padding-top: 200px;
+  padding-bottom: 140px;
   position: relative;
 }
 
@@ -4016,7 +4016,7 @@ blockquote {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 60%;
-  margin-top: 30px;
+  margin-top: 60px;
   margin-bottom: 30px;
   display: flex;
 }
@@ -8820,9 +8820,9 @@ blockquote {
     text-align: center;
   }
 
-  .big-banner-section {
+  /* .big-banner-section {
     padding-top: 175px;
-  }
+  } */
 
   .simple-text-content {
     grid-row-gap: 30px;
@@ -9606,7 +9606,7 @@ blockquote {
   }
 
   .text-wrapper {
-    grid-row-gap: 30px;
+    grid-row-gap: 20px;
   }
 
   .simple-image-wrap {
