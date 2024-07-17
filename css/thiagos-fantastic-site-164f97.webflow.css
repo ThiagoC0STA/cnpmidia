@@ -1,9 +1,9 @@
 :root {
-  --dark: #0b0132;
+  --dark: #090225;
   --white: white;
-  --primary: #6100ff;
+  --primary: #5505d7;
   --image-overlay: rgba(97, 0, 255, 0.2);
-  --light-dark: #160045;
+  --light-dark: #14023a;
   --black: black;
   --white-20: rgba(255, 255, 255, 0.2);
   --second-dark-10: rgba(22, 0, 69, 0.1);
@@ -1565,6 +1565,8 @@ blockquote {
   margin-bottom: 10px;
 }
 
+
+
 .more-features-icon {
   background-color: var(--white-20);
   color: #ffffffc1;
@@ -2091,9 +2093,21 @@ blockquote {
   display: flex;
 }
 
+.project-pagination-wrapper-end {
+  justify-content: flex-end;
+  
+}
+
+.subtitle-services {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: -8px;
+  margin-bottom: -8px;
+}
+
 .project-template-images-list {
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
@@ -4159,6 +4173,12 @@ blockquote {
   bottom: 0%;
   left: 0%;
   right: 0%;
+}
+
+.work-slide-overlay p {
+  font-size: 12px;
+  margin-left: 10px;
+  color: #836baa;
 }
 
 .work-slider-image-wrap {
