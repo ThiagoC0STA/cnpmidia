@@ -29,6 +29,60 @@
       src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
       type="text/javascript"
     ></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        emailjs.init("YdRm1Ea5ubkGzBY_Q");
+      });
+
+      function sendEmail(event) {
+        event.preventDefault();
+
+        emailjs
+          .sendForm("service_m0rtgma", "template_a146whv", "#email-form")
+          .then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+              window.location.href = "/thanks.html"; // Redireciona para a página de agradecimento em caso de sucesso
+            },
+            function (error) {
+              console.log("FAILED...", error);
+              alert("Failed to send email. Please try again later.");
+
+              // Envia um e-mail para o suporte notificando sobre o erro
+              var data = {
+                service_id: "service_m0rtgma",
+                template_id: "template_error_notification",
+                user_id: "YOUR_API_KEY",
+                template_params: {
+                  to_email: "support@cnpmidia.com",
+                  error_message: error.text,
+                },
+              };
+
+              fetch("https://api.emailjs.com/api/v1.0/email/send", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+              })
+                .then(function (response) {
+                  console.log(
+                    "Support notification sent successfully!",
+                    response.status,
+                    response.text
+                  );
+                })
+                .catch(function (error) {
+                  console.log("Failed to send support notification...", error);
+                });
+            }
+          );
+      }
+    </script>
+
     <script type="text/javascript">
       WebFont.load({
         google: {
@@ -336,10 +390,9 @@
                 id="email-form"
                 name="email-form"
                 data-name="Email Form"
-                method="get"
+                method="post"
                 class="form-contacts"
-                data-wf-page-id="6688521a6d77342f14bda05d"
-                data-wf-element-id="ea41af14-8b87-8ae8-ae5d-f8373dc8aafa"
+                onsubmit="sendEmail(event)"
               >
                 <input
                   class="contacts-input w-input"
@@ -349,8 +402,9 @@
                   placeholder="Your name"
                   type="text"
                   id="name"
-                  required=""
-                /><input
+                  required
+                />
+                <input
                   class="contacts-input w-input"
                   maxlength="256"
                   name="email"
@@ -358,29 +412,34 @@
                   placeholder="Your email"
                   type="email"
                   id="email"
-                  required=""
-                /><textarea
-                  placeholder="Your text"
+                  required
+                />
+                <input
+                  class="contacts-input w-input"
+                  maxlength="256"
+                  name="telegram"
+                  data-name="Telegram"
+                  placeholder="Your Telegram username (optional)"
+                  type="text"
+                  id="telegram"
+                />
+                <textarea
+                  placeholder="Your message"
                   maxlength="5000"
-                  id="field"
-                  name="field"
-                  data-name="field"
-                  required=""
+                  id="message"
+                  name="message"
+                  data-name="Message"
+                  required
                   class="contacts-textarea w-input"
-                ></textarea
-                ><input
+                ></textarea>
+                <input
                   type="submit"
                   data-wait="Please wait..."
                   class="primary-button full-width-mobile w-button"
                   value="Submit"
                 />
               </form>
-              <div class="form-success w-form-done">
-                <div>Thank you! Your submission has been received!</div>
-              </div>
-              <div class="form-error w-form-fail">
-                <div>Oops! Something went wrong while submitting the form.</div>
-              </div>
+              
             </div>
           </div>
         </div>
