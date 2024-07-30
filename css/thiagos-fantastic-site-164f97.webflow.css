@@ -161,7 +161,7 @@ li {
 }
 
 img {
-  max-width: 100%;
+
   display: inline-block;
 }
 
@@ -2791,9 +2791,9 @@ blockquote {
   display: none;
 }
 
-.brand {
+/* .brand {
   width: 50px;
-}
+} */
 
 .style-guide-tab-content-wrapper {
   grid-row-gap: 60px;
@@ -7142,8 +7142,8 @@ blockquote {
 
   .nav-menu-wrapper {
     z-index: 1;
-    padding-top: 28px;
-    padding-bottom: 28px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
   .blog-sidebar-left {
@@ -7458,7 +7458,6 @@ blockquote {
     flex-direction: column;
     flex: 1;
     align-items: flex-start;
-    padding-top: 20px;
     padding-left: 30px;
     padding-right: 30px;
     display: flex;
@@ -7479,7 +7478,7 @@ blockquote {
     justify-content: space-between;
     align-items: center;
     padding-top: 28px;
-    padding-bottom: 28px;
+    padding-bottom: 10px;
     padding-left: 30px;
     display: flex;
   }
