@@ -1447,11 +1447,21 @@ blockquote {
   margin-bottom: 30px;
 }
 
+.best-seller {
+  position: absolute;
+  right: -20px;
+  top: -40px;
+  width: 120px;
+  height: 120px;
+  filter: saturate(90%);
+
+}
+
 .pricing-plans-wrapper {
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr ;
   grid-auto-columns: 1fr;
   margin-top: 50px;
   display: grid;
