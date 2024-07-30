@@ -685,7 +685,8 @@ blockquote {
 }
 
 .nav-dropdown-link.w--current {
-  color: var(--dark);
+  color: #a867ed;
+  font-weight: bold;
 }
 
 .nav-item-title {
