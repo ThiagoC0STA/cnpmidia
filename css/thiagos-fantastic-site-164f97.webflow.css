@@ -238,7 +238,7 @@ blockquote {
 }
 
 .section.white-background {
-  background-color: var(--white);
+  background-color: #cecfff;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   margin-bottom: -50px;
@@ -2165,7 +2165,7 @@ blockquote {
 .project-template-image {
   object-fit: cover;
   width: 100%;
-  height: 460px;
+  height: 260px;
 }
 
 .project-template-empty-state {
@@ -6206,7 +6206,7 @@ blockquote {
   }
 
   .team-image-wrap {
-    height: 420px;
+    height: 520px;
   }
 
   .home-location-wrap {
@@ -6864,7 +6864,7 @@ blockquote {
   }
 
   .team-image-wrap {
-    height: 540px;
+    height: 640px;
   }
 
   .location-info {
