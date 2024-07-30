@@ -5058,6 +5058,9 @@ blockquote {
   width: 100%;
   display: grid;
 }
+.logo-grid img {
+  max-width: 100%;
+}
 
 .logo-grid.inner-block {
   grid-column-gap: 20px;
